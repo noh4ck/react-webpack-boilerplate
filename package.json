@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "clean": "rimraf dist",
-    "production":
-      "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
     "lint": "eslint ./app/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,15 +17,20 @@
   "author": "Kliment Petrov <kleopetroff@gmail.com>",
   "license": "MIT",
   "jest": {
-    "setupFiles": ["<rootDir>/config/jest/shim.js"],
+    "setupFiles": [
+      "<rootDir>/config/jest/shim.js"
+    ],
     "mapCoverage": true,
-    "collectCoverageFrom": ["app/**/*.{js,jsx,ts,tsx}"],
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,ts,tsx}"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/config/jest/assetsTransformer.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
       "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
     },
-    "testMatch": ["**/tests/**/*.js"],
+    "testMatch": [
+      "**/tests/**/*.js"
+    ],
     "transform": {
       "\\.js$": "babel-jest"
     }
@@ -52,7 +56,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-2": "6.24.1",
     "copy-webpack-plugin": "4.3.0",
-    "css-loader": "0.28.9",
+    "css-loader": "^0.28.9",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "4.13.0",
@@ -72,7 +76,7 @@
     "react-test-renderer": "16.2.0",
     "rimraf": "2.6.2",
     "sass-loader": "6.0.6",
-    "style-loader": "0.19.1",
+    "style-loader": "^0.20.1",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "url-loader": "0.6.2",
     "webpack": "3.11.0",
