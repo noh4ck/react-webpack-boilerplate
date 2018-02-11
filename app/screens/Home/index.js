@@ -1,10 +1,11 @@
 import React from 'react';
-import img from '../assets/images/react_logo_512x512.png';
+import img from '@assets/images/react_logo_512x512.png';
+import { WELCOME } from 'babel-dotenv';
 
-const App = () => {
+const Home = () => {
   return (
     <div>
-      <h2 id="heading">Hello ReactJS</h2>
+      <h2 id="heading">{WELCOME}</h2>
       <img
         className="image"
         style={{ margin: '0.5em' }}
@@ -17,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

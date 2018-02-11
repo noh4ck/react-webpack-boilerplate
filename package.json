@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "clean": "rimraf dist",
-    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "production":
+      "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
     "lint": "eslint ./app/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -17,20 +18,15 @@
   "author": "Kliment Petrov <kleopetroff@gmail.com>",
   "license": "MIT",
   "jest": {
-    "setupFiles": [
-      "<rootDir>/config/jest/shim.js"
-    ],
+    "setupFiles": ["<rootDir>/config/jest/shim.js"],
     "mapCoverage": true,
-    "collectCoverageFrom": [
-      "app/**/*.{js,jsx,ts,tsx}"
-    ],
+    "collectCoverageFrom": ["app/**/*.{js,jsx,ts,tsx}"],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/config/jest/assetsTransformer.js",
       "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
     },
-    "testMatch": [
-      "**/?(*.)(spec|test).js?(x)"
-    ],
+    "testMatch": ["**/tests/**/*.js"],
     "transform": {
       "\\.js$": "babel-jest"
     }
